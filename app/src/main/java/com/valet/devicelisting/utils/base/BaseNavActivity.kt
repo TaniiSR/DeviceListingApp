@@ -1,11 +1,9 @@
 package com.valet.devicelisting.utils.base
 
 import android.os.Bundle
-import androidx.annotation.CallSuper
 import androidx.annotation.IdRes
 import androidx.annotation.NavigationRes
 import androidx.navigation.*
-
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.valet.devicelisting.R
@@ -48,6 +46,13 @@ abstract class BaseNavActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.Vi
     protected open var startDestinationInput: Bundle? = Bundle()
     protected open var extrasBundle = Bundle()
     private var navHostFragment: NavHostFragment? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (intent?.hasExtra(EXTRA) == true) {
+            startDestinationInput = intent?.getBundleExtra(EXTRA)
+        }
+    }
 
     private val onDestinationChangedListener =
         NavController.OnDestinationChangedListener { controller, destination, arguments ->
