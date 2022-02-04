@@ -75,12 +75,6 @@ object NetworkDependencies {
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${NetworkVersions.GLIDE}"
 }
 
-//ThirdParty
-object ThirdPartyDependencies {
-    const val SDP = "com.intuit.sdp:sdp-android:${ThirdPartyVersions.SDP}"
-    const val SSP = "com.intuit.ssp:ssp-android:${ThirdPartyVersions.SDP}"
-}
-
 object HiltDaggerDependencies {
     // Hilt Dagger DI
     const val DAGGER_HILT = "com.google.dagger:hilt-android:${HiltDaggerVersion.HILT_DI}"

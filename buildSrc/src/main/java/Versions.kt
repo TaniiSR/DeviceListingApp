@@ -25,10 +25,6 @@ object KotlinVersions {
     const val COROUTINE_VERSION = "1.6.0"
 }
 
-object ThirdPartyVersions {
-    const val SDP = "1.0.6"
-}
-
 object NetworkVersions {
     const val GLIDE = "4.12.0"
     const val GSON = "2.8.9"

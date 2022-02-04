@@ -73,9 +73,6 @@ android {
     viewBinding {
         android.buildFeatures.viewBinding = true
     }
-    buildFeatures {
-        this.dataBinding = true
-    }
 
     packagingOptions {
         resources {
@@ -113,7 +110,6 @@ dependencies {
     implementation(DependenciesManager.navigationImplementation)
     implementation(DependenciesManager.networkImplementation)
     testImplementation(DependenciesManager.testingImplementation)
-    implementation(DependenciesManager.thirdPartyImplementation)
     androidTestImplementation(DependenciesManager.androidTestImplementation)
     kapt(HiltDaggerDependencies.DAGGER_COMPILER)
     implementation(TestDependencies.COROUTINES)

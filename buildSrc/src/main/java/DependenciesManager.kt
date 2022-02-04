@@ -46,13 +46,6 @@ object DependenciesManager {
         add(NavigationDependencies.NAVIGATION_UI_KTX)
     }
 
-    val thirdPartyImplementation = arrayListOf<String>().apply {
-        add(ThirdPartyDependencies.SDP)
-        add(ThirdPartyDependencies.SSP)
-    }
-    
-
-
     val hiltImplementation = arrayListOf<String>().apply {
         add(HiltDaggerDependencies.DAGGER_HILT)
         add(HiltDaggerDependencies.HILT_FRAGMENT)
