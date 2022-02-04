@@ -49,18 +49,6 @@ abstract class BaseNavActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.Vi
     protected open var extrasBundle = Bundle()
     private var navHostFragment: NavHostFragment? = null
 
-    @CallSuper
-    override fun init(savedInstanceState: Bundle?) {
-        initNavigationGraph()
-    }
-
-    override fun preInit(savedInstanceState: Bundle?) {
-        super.preInit(savedInstanceState)
-        if (intent?.hasExtra(EXTRA) == true) {
-            startDestinationInput = intent?.getBundleExtra(EXTRA)
-        }
-    }
-
     private val onDestinationChangedListener =
         NavController.OnDestinationChangedListener { controller, destination, arguments ->
             onDestinationChanged(controller, destination, arguments)
