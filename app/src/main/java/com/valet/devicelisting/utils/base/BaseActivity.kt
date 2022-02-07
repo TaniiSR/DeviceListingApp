@@ -32,9 +32,7 @@ abstract class BaseActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.ViewM
 
     abstract fun getViewBinding(): VB
 
-    open fun onClick(id: Int) {
-        // to be handle
-    }
+    open fun onClick(id: Int) = Unit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,9 +59,7 @@ abstract class BaseActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.ViewM
                 is UIEvent.Loading -> {
                     showLoader(it.isLoading)
                 }
-                else -> {
-                    // to be handle later
-                }
+                else -> Unit
             }
         }
     }

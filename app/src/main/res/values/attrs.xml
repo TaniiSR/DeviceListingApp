@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ldPrimaryTextColor" format="reference" />
+    <attr name="ldPrimaryLightText" format="reference" />
+    <attr name="ldWhiteColor" format="reference" />
+    <attr name="ldBlackColor" format="reference" />
+</resources>
