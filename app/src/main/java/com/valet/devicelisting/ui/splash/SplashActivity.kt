@@ -21,8 +21,8 @@ class SplashActivity :
     override val viewModel: ISplash.ViewModel by viewModels<SplashVM>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        hideSystemUI(mViewBinding.root)
-        initCountDownTimer(5)
+        hideSystemUI(mViewBinding.root)
+        initCountDownTimer(2)
     }
 
     private fun initCountDownTimer(time: Int) {
@@ -30,15 +30,15 @@ class SplashActivity :
             override fun onTick(millisUntilFinished: Long) = Unit
 
             override fun onFinish() {
-                startNoteMainActivity()
+                startHomeActivity()
             }
         }.start()
     }
 
-    private fun startNoteMainActivity() {
-//        showSystemUI(mViewBinding.root)
+    private fun startHomeActivity() {
+        showSystemUI(mViewBinding.root)
         val intent = Intent(this@SplashActivity, HomeActivity::class.java)
-        activityLauncher.launch(intent)
+        startActivity(intent)
         finish()
     }
 }

@@ -38,6 +38,7 @@ abstract class BaseActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.ViewM
         super.onCreate(savedInstanceState)
         progress = createProgressDialog(this)
         mViewBinding = getViewBinding()
+        setContentView(mViewBinding.root)
         setObservers()
     }
 
