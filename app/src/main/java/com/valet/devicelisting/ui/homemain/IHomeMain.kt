@@ -1,8 +1,8 @@
-package com.valet.devicelisting.ui.home
+package com.valet.devicelisting.ui.homemain
 
 import com.valet.devicelisting.utils.base.interfaces.IBase
 
-interface IHome {
+interface IHomeMain {
     interface View : IBase.View<ViewModel>
     interface ViewModel : IBase.ViewModel<State>
     interface State : IBase.State

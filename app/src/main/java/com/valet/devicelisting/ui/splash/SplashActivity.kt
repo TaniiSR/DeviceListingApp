@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.activity.viewModels
 import com.valet.devicelisting.databinding.ActivitySplashBinding
-import com.valet.devicelisting.ui.home.HomeActivity
+import com.valet.devicelisting.ui.homemain.HomeMainActivity
 import com.valet.devicelisting.utils.base.BaseActivity
 import com.valet.devicelisting.utils.extensions.hideSystemUI
 import com.valet.devicelisting.utils.extensions.showSystemUI
@@ -37,7 +37,7 @@ class SplashActivity :
 
     private fun startHomeActivity() {
         showSystemUI(mViewBinding.root)
-        val intent = Intent(this@SplashActivity, HomeActivity::class.java)
+        val intent = Intent(this@SplashActivity, HomeMainActivity::class.java)
         startActivity(intent)
         finish()
     }

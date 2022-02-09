@@ -13,6 +13,7 @@
     <color name="ldBlack">#FF000000</color>
     <color name="ldWhite">#FFFFFFFF</color>
     <color name="ldGrey">#636161</color>
+    <color name="ldGreyLight">#F6F8FE</color>
     <color name="ldBlueWithAHintOfPurpleFaded">#805E35B1</color>
 
 </resources>

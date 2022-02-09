@@ -30,6 +30,7 @@
     <dimen name="ld_margin_one_dp">1dp</dimen>
     <dimen name="ld_margin_two_dp">2dp</dimen>
     <dimen name="ld_margin_three_dp">3dp</dimen>
+    <dimen name="ld_margin_extra_small">4dp</dimen>
     <dimen name="ld_margin_small">8dp</dimen>
     <dimen name="ld_margin_normal">12dp</dimen>
     <dimen name="ld_margin_medium">16dp</dimen>

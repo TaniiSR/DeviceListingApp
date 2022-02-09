@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.home.HomeActivity"
+            android:name=".ui.homemain.HomeMainActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
     </application>

@@ -11,11 +11,13 @@
         <item name="colorOnSecondary">@color/ldBlack</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="M">@color/ldDarkSlateBlue</item>
-        <!-- Customize your theme here. -->
+
+        <item name="tbTitleStyle">@style/Device.ld.Widget.TextView.PrimaryColor.Medium</item>
+
 
         <!-- Primary brand color. -->
         <item name="colorPrimaryDark">@color/ldDarkSlateBlue</item>
-        <item name="android:colorBackground">@color/ldWhite</item>
+        <item name="android:colorBackground">@color/ldGreyLight</item>
 
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:layoutDirection">ltr</item>
