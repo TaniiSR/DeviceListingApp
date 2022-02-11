@@ -10,7 +10,7 @@ import com.valet.devicelisting.data.models.DeviceDto
 import com.valet.devicelisting.databinding.FragmentDeviceDetailBinding
 import com.valet.devicelisting.utils.base.BaseNavFragment
 import com.valet.devicelisting.utils.extensions.observe
-import com.valet.devicelisting.utils.loadImage
+import com.valet.devicelisting.utils.extensions.loadImage
 import com.valet.devicelisting.utils.uikit.toolbarview.ToolBarView
 import dagger.hilt.android.AndroidEntryPoint
 

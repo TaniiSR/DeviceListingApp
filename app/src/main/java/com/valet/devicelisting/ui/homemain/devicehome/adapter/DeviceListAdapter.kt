@@ -11,7 +11,7 @@ import com.valet.devicelisting.databinding.LayoutDeviceListItemBinding
 import com.valet.devicelisting.databinding.LayoutNoDeviceResultItemBinding
 import com.valet.devicelisting.utils.base.BaseBindingSearchRecyclerAdapter
 import com.valet.devicelisting.utils.base.interfaces.OnItemClickListener
-import com.valet.devicelisting.utils.loadImage
+import com.valet.devicelisting.utils.extensions.loadImage
 import java.util.*
 
 class DeviceListAdapter(
