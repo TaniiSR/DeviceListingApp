@@ -1,4 +1,4 @@
-package com.valet.devicelisting.utils
+package com.valet.devicelisting.utils.extensions
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView

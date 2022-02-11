@@ -3,7 +3,9 @@ package com.valet.devicelisting.utils.base
 import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.annotation.NavigationRes
-import androidx.navigation.*
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewbinding.ViewBinding
 import com.valet.devicelisting.R
@@ -95,31 +97,6 @@ abstract class BaseNavActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.Vi
         } catch (e: Exception) {
             e.printStackTrace()
             throw RuntimeException(e.message)
-        }
-    }
-
-
-    /**
-     * Navigates to the specified destination screen.
-     *
-     * @param destinationId the id of the destination screen (either the new Activity or Fragment)
-     * @param extras the extra arguments to be passed to the destination screen
-     */
-    protected fun navigate(@IdRes destinationId: Int, extras: Bundle? = null) {
-        navController.navigate(destinationId, extras)
-    }
-
-    /**
-     * Navigates to the specified destination screen.
-     *
-     * @param directions the direction that leads to the destination screen.
-     * @param navigationExtras
-     */
-    protected fun navigate(directions: NavDirections, navigationExtras: Navigator.Extras? = null) {
-        navigationExtras?.let { navExtras ->
-            navController.navigate(directions, navExtras)
-        } ?: run {
-            navController.navigate(directions)
         }
     }
 

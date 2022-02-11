@@ -118,7 +118,6 @@ abstract class BaseBindingSearchRecyclerAdapter<T : Any, VH : RecyclerView.ViewH
 
         override fun performFiltering(constraint: CharSequence?): FilterResults {
 
-            val filterString = constraint.toString().lowercase()
             val results = FilterResults()
             val list = mutableListOf<T>()
             list.addAll(duplicate)
