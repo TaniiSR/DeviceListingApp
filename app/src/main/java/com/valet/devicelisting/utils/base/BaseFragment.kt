@@ -24,11 +24,8 @@ abstract class BaseFragment<VB : ViewBinding, VS : IBase.State, VM : IBase.ViewM
     IBase.View<VM>, Fragment(contentLayoutId),
     OnBackPressedListener {
 
-    protected final val activityLauncher: BetterActivityResult<Intent, ActivityResult> by lazy {
-        BetterActivityResult.registerActivityForResult(
-            this
-        )
-    }
+    protected val activityLauncher: BetterActivityResult<Intent, ActivityResult> =
+        BetterActivityResult.registerActivityForResult(this)
 
     private lateinit var onBackPressedCallback: OnBackPressedCallback
     lateinit var mViewBinding: VB

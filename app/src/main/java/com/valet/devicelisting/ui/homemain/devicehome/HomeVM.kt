@@ -10,7 +10,6 @@ import com.valet.devicelisting.ui.homemain.devicehome.adapter.DeviceListAdapter
 import com.valet.devicelisting.utils.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -20,7 +19,7 @@ class HomeVM @Inject constructor(
     private val dataRepository: IDataRepository
 ) : BaseViewModel<IHome.State>(), IHome.ViewModel {
 
-    private val _deviceList = MutableLiveData<List<DeviceDto>?>()
+    private val _deviceList = MutableLiveData<List<DeviceDto>>()
     override val deviceList: LiveData<List<DeviceDto>?> = _deviceList
 
     override val deviceListAdapter: DeviceListAdapter = DeviceListAdapter(mutableListOf())
@@ -28,14 +27,13 @@ class HomeVM @Inject constructor(
     override fun getDeviceList() {
         launch {
             showLoading(onBackGround = true)
-            delay(2000)
             val response = dataRepository.getDeviceList()
             withContext(Dispatchers.Main) {
                 when (response.isNullOrEmpty()) {
                     true -> {
                         hideLoading()
                         // Show error from response
-                        _deviceList.value = null
+                        _deviceList.value = listOf()
                         showToast("Sorry Something went wrong")
                     }
                     false -> {

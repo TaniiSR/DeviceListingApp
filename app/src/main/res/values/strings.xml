@@ -4,4 +4,7 @@
     <!--    Home device listing-->
     <string name="screen_home_device_listing_display_text_tb_title">Device List</string>
     <string name="screen_home_device_listing_display_text_no_result">No result found</string>
+
+    <!--     device detail-->
+    <string name="screen_device_detail_display_text_tb_title">Device Detail</string>
 </resources>

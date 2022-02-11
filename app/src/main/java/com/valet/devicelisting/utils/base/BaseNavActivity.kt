@@ -52,6 +52,7 @@ abstract class BaseNavActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.Vi
         if (intent?.hasExtra(EXTRA) == true) {
             startDestinationInput = intent?.getBundleExtra(EXTRA)
         }
+        initNavigationGraph()
     }
 
     private val onDestinationChangedListener =

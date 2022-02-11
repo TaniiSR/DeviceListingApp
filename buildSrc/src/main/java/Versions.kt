@@ -44,7 +44,7 @@ object HiltDaggerVersion {
 
 object TestDependenciesVersions {
     const val JUNIT4 = "4.13.2"
-    const val MOCKK = "1.4.1"
+    const val MOCKK = "1.12.2"
     const val ROBOLECTRIC = "4.7.3"
     const val KLUENT = "1.14"
     const val TESTRUNNER = "1.1.0"
@@ -59,6 +59,6 @@ object TestDependenciesVersions {
     const val JUPITER = "5.7.0"
     const val MOCK_JSON = "20180813"
     const val MOCK_WEB_SERVER = "4.9.0"
-    const val COROUTINES = "1.4.2-native-mt"
+    const val COROUTINES = "1.6.0"
     const val ANDROIDX_ARCH_CORE = "2.1.0"
 }

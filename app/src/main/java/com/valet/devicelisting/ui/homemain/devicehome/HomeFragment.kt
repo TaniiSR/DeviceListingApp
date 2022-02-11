@@ -2,6 +2,7 @@ package com.valet.devicelisting.ui.homemain.devicehome
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import com.valet.devicelisting.R
 import com.valet.devicelisting.data.models.DeviceDto
@@ -60,7 +61,10 @@ class HomeFragment :
         override fun onItemClick(view: View, data: Any, pos: Int) {
             when (data) {
                 is DeviceDto -> {
-                    showToast(data.title ?: "")
+                    navigate(
+                        R.id.action_homeFragment_to_deviceDetailFragment,
+                        bundleOf(DeviceDto::class.java.name to data)
+                    )
                 }
             }
         }

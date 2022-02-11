@@ -3,6 +3,7 @@ plugins {
     id(BuildPluginsConfig.androidHilt)
     kotlin(BuildPluginsConfig.kotlinAndroid)
     kotlin(BuildPluginsConfig.kotlinKapt)
+    id(BuildPluginsConfig.kotlinParcelize)
     id("kotlin-android")
 }
 
@@ -84,6 +85,7 @@ android {
             excludes += "META-INF/NOTICE"
             excludes += "META-INF/*.kotlin_module"
             excludes += "META-INF/gradle/incremental.annotation.processors"
+            resources.excludes += "DebugProbesKt.bin"
         }
     }
 

@@ -38,7 +38,7 @@ class SplashActivity :
     private fun startHomeActivity() {
         showSystemUI(mViewBinding.root)
         val intent = Intent(this@SplashActivity, HomeMainActivity::class.java)
-        startActivity(intent)
+        activityLauncher.launch(intent)
         finish()
     }
 }

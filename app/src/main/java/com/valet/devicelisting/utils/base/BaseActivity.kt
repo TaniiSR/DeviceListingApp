@@ -20,11 +20,8 @@ abstract class BaseActivity<VB : ViewBinding, VS : IBase.State, VM : IBase.ViewM
     IBase.View<VM>,
     AppCompatActivity() {
 
-    protected val activityLauncher: BetterActivityResult<Intent, ActivityResult> by lazy {
-        BetterActivityResult.registerActivityForResult(
-            this
-        )
-    }
+    protected val activityLauncher: BetterActivityResult<Intent, ActivityResult> =
+        BetterActivityResult.registerActivityForResult(this)
 
     lateinit var mViewBinding: VB
     private var progress: Dialog? = null

@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.valet.devicelisting.ui.homemain.devicehome.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_deviceDetailFragment"
+            app:destination="@id/deviceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceDetailFragment"
+        android:name="com.valet.devicelisting.ui.homemain.devicedetail.DeviceDetailFragment"
+        android:label="DeviceDetailFragment"
+        tools:layout="@layout/fragment_device_detail" />
 </navigation>
