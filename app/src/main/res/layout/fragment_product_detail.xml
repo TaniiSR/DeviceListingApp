@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.task.products.utils.uikit.toolbarview.ToolBarView
+        android:id="@+id/tbView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tbBackgroundDrawable="@drawable/bg_rounded_toolbar"
+        app:tbStartIconDrawable="@drawable/ic_back_arrow_left"
+        app:tbTitleText="@string/screen_device_detail_display_text_tb_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/ld_margin_normal"
+                android:layout_marginTop="@dimen/ld_margin_normal"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/shapeAppearance.App.CircleImageView.MediumComponent"
+                app:strokeColor="@color/ldBlack"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvName"
+                style="@style/Device.ld.Widget.TextView.PrimaryColor.XLarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ld_margin_small"
+                android:autoSizeTextType="uniform"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="0dp"
+                android:lines="1"
+                app:layout_constraintEnd_toEndOf="@id/ivImage"
+                app:layout_constraintStart_toStartOf="@id/ivImage"
+                app:layout_constraintTop_toBottomOf="@id/ivImage"
+                tools:text="Test ThermoState" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPrice"
+                style="@style/Device.ld.Widget.TextView.BlackColor.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ld_margin_small"
+                android:autoSizeTextType="uniform"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="0dp"
+                android:lines="1"
+                app:layout_constraintEnd_toEndOf="@id/ivImage"
+                app:layout_constraintStart_toStartOf="@id/ivImage"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="20 USD" />
+
+            <RatingBar
+                android:id="@+id/rbRating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice">
+
+            </RatingBar>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDescription"
+                style="@style/Device.ld.Widget.TextView.BlackColor.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/ld_margin_small"
+                android:layout_marginTop="@dimen/ld_margin_small"
+                android:autoSizeTextType="uniform"
+                android:gravity="start"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rbRating"
+                tools:text="This is the detail page" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btMarkFavourite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ld_margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDescriptionLong"
+                style="@style/Device.ld.Widget.TextView.BlackColor.Medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/ld_margin_small"
+                android:layout_marginTop="@dimen/ld_margin_small"
+                android:autoSizeTextType="uniform"
+                android:gravity="start"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btMarkFavourite"
+                tools:text="This is the detail page" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clFooter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescriptionLong">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvFooter"
+                    style="@style/Device.ld.Widget.TextView.PrimaryColor.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ld_margin_small"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:padding="@dimen/ld_margin_large"
+                    android:text="@string/screen_home_device_listing_display_text_footer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

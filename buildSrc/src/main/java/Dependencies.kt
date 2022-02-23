@@ -52,6 +52,7 @@ object AndroidxDependencies {
     const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:${AndroidXVersions.VIEWPAGER2}"
     const val MATERIAL = "com.google.android.material:material:${AndroidXVersions.MATERIAL}"
     const val PAGING_RUNTIME = "androidx.paging:paging-runtime:${AndroidXVersions.PAGING}"
+    const val SWIPE = "androidx.swiperefreshlayout:swiperefreshlayout:${AndroidXVersions.SWIPE}"
     const val RECYCLERVIEW_SELECTION =
         "androidx.recyclerview:recyclerview-selection:${AndroidXVersions.RECYCLERVIEW_SELECTION}"
 }
@@ -69,7 +70,12 @@ object NavigationDependencies {
 // Retrofit2 & Networking
 object NetworkDependencies {
     const val GSON = "com.google.code.gson:gson:${NetworkVersions.GSON}"
-
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:${NetworkVersions.RETROFIT}"
+    const val OKHTTP = "com.squareup.okhttp3:okhttp:${NetworkVersions.OKHTTP}"
+    const val OKHTTP_LOGGING_INTERCEPTOR =
+        "com.squareup.okhttp3:logging-interceptor:${NetworkVersions.OKHTTP}"
+    const val RETROFIT_CONVERTOR_GSON =
+        "com.squareup.retrofit2:converter-gson:${NetworkVersions.RETROFIT}"
     //Glide Image Loading
     const val GLIDE = "com.github.bumptech.glide:glide:${NetworkVersions.GLIDE}"
     const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${NetworkVersions.GLIDE}"

@@ -1,41 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
-    <com.valet.devicelisting.utils.uikit.searchview.SearchView
+    <com.task.products.utils.uikit.searchview.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.valet.devicelisting.utils.uikit.toolbarview.ToolBarView
+    <com.task.products.utils.uikit.toolbarview.ToolBarView
         android:id="@+id/tbView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        app:tbBackgroundDrawable="@drawable/bg_rounded_toolbar"
         app:tbEndIconDrawable="@drawable/ic_search"
         app:tbEndIconVisibility="true"
-        app:tbBackgroundDrawable="@drawable/bg_rounded_toolbar"
         app:tbStartIconVisibility="false"
         app:tbTitleText="@string/screen_home_device_listing_display_text_tb_title" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDevices"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swRefresh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:nestedScrollingEnabled="false"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/ld_margin_extra_small"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/clFilter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchView"
-        tools:itemCount="3"
-        tools:listitem="@layout/layout_device_list_item" />
+        app:layout_constraintTop_toBottomOf="@id/tbView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDevices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/ld_margin_extra_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            tools:itemCount="3"
+            tools:listitem="@layout/layout_product_list_available_item" />
 
 
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFilter"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/ldWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ld_margin_medium"
+            android:layout_marginEnd="@dimen/ld_margin_small"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="tvAll, tvAvailable, tvFavourite"
+            app:flow_wrapMode="chain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAll"
+            style="@style/Device.ld.Widget.TextView.BlackColor.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ld_margin_medium"
+            android:layout_marginEnd="@dimen/ld_margin_small"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="0dp"
+            android:lines="1"
+            android:text="@string/screen_home_device_listing_display_text_all" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAvailable"
+            style="@style/Device.ld.Widget.TextView.BlackColor.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ld_margin_medium"
+            android:layout_marginEnd="@dimen/ld_margin_small"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="0dp"
+            android:lines="1"
+            android:text="@string/screen_home_device_listing_display_text_available" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvFavourite"
+            style="@style/Device.ld.Widget.TextView.BlackColor.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ld_margin_medium"
+            android:layout_marginEnd="@dimen/ld_margin_small"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="0dp"
+            android:lines="1"
+            android:text="@string/screen_home_device_listing_display_text_fav" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

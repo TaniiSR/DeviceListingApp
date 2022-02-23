@@ -12,6 +12,10 @@ object DependenciesManager {
     val networkImplementation = arrayListOf<String>().apply {
         add(NetworkDependencies.GSON)
         add(NetworkDependencies.GLIDE)
+        add(NetworkDependencies.RETROFIT)
+        add(NetworkDependencies.OKHTTP)
+        add(NetworkDependencies.OKHTTP_LOGGING_INTERCEPTOR)
+        add(NetworkDependencies.RETROFIT_CONVERTOR_GSON)
     }
 
     val lifeCycleKtxImplementation = arrayListOf<String>().apply {
@@ -37,6 +41,7 @@ object DependenciesManager {
         add(AndroidxDependencies.VIEWPAGER2)
         add(AndroidxDependencies.MATERIAL)
         add(AndroidxDependencies.PAGING_RUNTIME)
+        add(AndroidxDependencies.SWIPE)
         add(AndroidxDependencies.RECYCLERVIEW_SELECTION)
 
     }

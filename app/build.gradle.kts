@@ -58,7 +58,7 @@ android {
             versionName = "1.0.0"
             applicationId = "com.valet.devicelisting"
             dimension = "version"
-            resValue("string", "app_name", "Devices")
+            resValue("string", "app_name", "Products")
 
         }
 
@@ -67,7 +67,7 @@ android {
             versionName = "1.0.0"
             applicationIdSuffix = ".dev"
             dimension = "version"
-            resValue("string", "app_name", "DevicesDev")
+            resValue("string", "app_name", "Products")
         }
 
     }

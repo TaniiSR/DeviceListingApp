@@ -3,12 +3,17 @@
     <string name="common_text_cancel">Cancel</string>
 
     <!-- Splash scree-->
-    <string name="screen_splash_display_text_title">Devices</string>
+    <string name="screen_splash_display_text_title">Product</string>
 
     <!--    Home device listing-->
-    <string name="screen_home_device_listing_display_text_tb_title">Device List</string>
+    <string name="screen_home_device_listing_display_text_tb_title">Product List</string>
     <string name="screen_home_device_listing_display_text_no_result">No result found</string>
+    <string name="screen_home_device_listing_display_text_footer"> © 2021 CHECK24</string>
+    <string name="screen_home_device_listing_display_text_all">All</string>
+    <string name="screen_home_device_listing_display_text_available">Available</string>
+    <string name="screen_home_device_listing_display_text_fav">Favourite</string>
 
     <!--     device detail-->
-    <string name="screen_device_detail_display_text_tb_title">Device Detail</string>
+    <string name="screen_device_detail_display_text_tb_title">Product Detail</string>
+    <string name="screen_webview_display_text_tb_title">Terms</string>
 </resources>

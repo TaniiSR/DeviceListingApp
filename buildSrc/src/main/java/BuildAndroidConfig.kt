@@ -9,7 +9,7 @@ object BuildAndroidConfig {
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0"
 
-    const val APPLICATION_ID = "com.valet.devicelisting"
+    const val APPLICATION_ID = "com.task.products"
     const val androidTestInstrumentation = "androidx.test.runner.AndroidJUnitRunner"
     const val proguardConsumerRules =  "consumer-rules.pro"
     const val dimension = "environment"

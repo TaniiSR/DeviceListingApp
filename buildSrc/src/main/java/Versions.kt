@@ -10,6 +10,7 @@ object AndroidXVersions {
     const val MATERIAL = "1.5.0"
     const val VECTOR_DRAWABLE = "1.1.0"
     const val PAGING = "3.1.0"
+    const val SWIPE = "1.1.0"
     const val VIEWPAGER2 = "1.0.0"
 
 }
@@ -28,6 +29,8 @@ object KotlinVersions {
 object NetworkVersions {
     const val GLIDE = "4.12.0"
     const val GSON = "2.8.9"
+    const val RETROFIT = "2.9.0"
+    const val OKHTTP = "4.9.1"
 }
 
 object BuildPluginsVersions {
